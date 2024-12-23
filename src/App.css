@@ -1,0 +1,151 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.todo-app {
+  width: 600px;
+  height: 90vh;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.category {
+  border-bottom: 1px solid #ddd;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.category-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  cursor: pointer;
+  background-color: #f5f5f5;
+}
+
+.category-header:hover {
+  background-color: #eaeaea;
+}
+
+.folder-icon {
+  filter: grayscale(100%);
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.category-name {
+  flex-grow: 1;
+  font-size: 14.97px;
+  font-weight: 700;
+  line-height: 18.11px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.dropdown-icon {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.task-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 15px 15px 15px;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.task:last-child {
+  border-bottom: none;
+}
+
+.task label {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.task input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  appearance: none;
+  border: 2px solid #000;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+}
+
+.task input[type="checkbox"]:checked {
+  background-color: #3a3535;
+  border-color: #3a3535;
+}
+
+.task input[type="checkbox"]:checked::after {
+  content: '\2713';
+  color: white;
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+  left: 2px;
+}
+
+
+.task.completed label {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.task-due {
+  margin-left: 10px;
+  font-size: 12px;
+  color: #d9534f;
+}
+
+.add-task {
+  display: flex;
+  padding: 15px;
+  border-top: 1px solid #ddd;
+  background-color: #f5f5f5;
+}
+
+.add-task input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 0.1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  background: transparent;
+  color: #000;
+}
+
+.add-task button {
+  margin-left: 10px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-task button:hover {
+  background-color: white;
+  color: #000;
+}
